@@ -1,0 +1,29 @@
+# Copyright 2017 Rolando Muñoz Aramburú
+
+#Description: This script stablish a protocol to retrive and modify field information from "preferences folder files". 
+
+#! ~~~ params
+#! in:
+#!   .tierName$: the name of a tier
+#! out:
+#!   .return: the number of the tier. It returns 0 if not found
+#! selection:
+#!   in:
+#!     textgrid
+#!   out:
+#!     textgrid
+#! ~~~
+#!
+#! Get the tier number given a string
+#!
+procedure getTierNumber: .tierName$
+  .n = Get number of tiers
+  .return = 0
+  for .i to .n
+    .tierName_tmp$ = Get tier name: .i
+    if .tierName_tmp$ == .tierName$
+      .return = .i
+      .i = .n
+    endif
+  endfor
+endproc
