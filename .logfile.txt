@@ -1,0 +1,6 @@
+phonetize.tgFolderDir.input: 
+phonetize.tgFolderDir.ouput: 
+align.sdFolderDir.input: 
+align.sdFolderDir.output: 
+ortho_tier: Phrases
+phono_tier: Phrases.phono
